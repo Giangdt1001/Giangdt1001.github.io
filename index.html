@@ -56,8 +56,12 @@
     <script>
         const input = document.querySelector('[autocomplete=one-time-code');
         input.addEventListener('input', () => {
+            console.log(input.selectionStart)
             input.style.setProperty('--_otp-digit', input.selectionStart)
-            input.blur()
+            if (input.selectionStart >= 6) {
+                input.blur()
+            }
+
         });
     </script>
 </body>

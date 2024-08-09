@@ -55,7 +55,10 @@
 
     <script>
         const input = document.querySelector('[autocomplete=one-time-code');
-        input.addEventListener('input', () => input.style.setProperty('--_otp-digit', input.selectionStart));
+        input.addEventListener('input', () => {
+            input.style.setProperty('--_otp-digit', input.selectionStart)
+            input.blur()
+        });
     </script>
 </body>
 
